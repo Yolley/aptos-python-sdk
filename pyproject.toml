@@ -1,6 +1,6 @@
 [project]
 name = "aptos-sdk-fork"
-version = "0.12.0a1"
+version = "0.12.0a2"
 description = "Aptos SDK"
 authors = [{ name = "Aptos Labs", email = "opensource@aptoslabs.com" }]
 license = "Apache-2.0"
@@ -17,7 +17,8 @@ dependencies = [
     "tomli>=2.4.0,<3",
     "typing-extensions>=4.15.0,<5",
     # v2 dependencies
-    "coincurve>=20,<21",
+    "coincurve==21.0.0; python_version < '3.14'",
+    "coincurve==20.0.0; python_version >= '3.14'",
     "bip-utils>=2.9,<3",
     # Security overrides for transitive dependencies
     "h11>=0.16.0,<0.17",       # via httpx -> httpcore
