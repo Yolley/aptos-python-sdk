@@ -1,7 +1,7 @@
 import importlib.metadata as metadata
 
 # constants
-PACKAGE_NAME = "aptos-sdk"
+PACKAGE_NAME = "aptos-sdk-fork"
 
 
 class Metadata:

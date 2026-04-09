@@ -17,18 +17,15 @@ runs:
   using: composite
   steps:
     - name: Setup python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: ${{ inputs.python_version }}
 
     - name: Install uv
-      uses: astral-sh/setup-uv@v5
+      uses: astral-sh/setup-uv@v7
       with:
         enable-cache: true
         cache-dependency-glob: "**/uv.lock"
-
-    - name: Setup AikidoSec Safe Chain
-      uses: aptos-labs/actions/aikidosec-safe-chain@main
 
     - name: Install project
       if: inputs.pyproject_directory != ''

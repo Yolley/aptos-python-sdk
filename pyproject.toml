@@ -1,12 +1,13 @@
 [project]
-name = "aptos-sdk"
-version = "0.11.0"
+name = "aptos-sdk-fork"
+version = "0.12.0a1"
 description = "Aptos SDK"
 authors = [{ name = "Aptos Labs", email = "opensource@aptoslabs.com" }]
 license = "Apache-2.0"
 readme = "README.md"
 requires-python = ">=3.12"
 keywords = ["web3", "sdk", "aptos", "blockchain"]
+packages = [{ include = "aptos_sdk" }]
 
 dependencies = [
     "cryptography>=46.0.5,<47",
@@ -59,6 +60,18 @@ show_missing = true
 
 [tool.coverage.html]
 directory = "htmlcov"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "aptos_sdk",
+    "README.md",
+]
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "aptos_sdk",
+    "README.md",
+]
 
 [tool.ruff]
 target-version = "py312"
