@@ -1,6 +1,6 @@
 [project]
 name = "aptos-sdk-fork"
-version = "0.12.1a2"
+version = "0.12.0a3"
 description = "Aptos SDK"
 authors = [{ name = "Aptos Labs", email = "opensource@aptoslabs.com" }]
 license = "Apache-2.0"
